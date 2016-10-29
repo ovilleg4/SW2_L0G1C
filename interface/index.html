@@ -4,43 +4,79 @@
   <meta charset="utf-8">
   <title>ACCESS</title>
   <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/dataTables.bootstrap.min.css">
 
   <!-- Optional theme -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/bootstrap-theme.min.css">
 
 </head>
-  <body class="container" style="border:2px solid; padding:5px">
-    <div class="container">
-      <header>
-        <img src="images/ACCESS_logo.png" alt="ACCESS LOGO" align="left"/>
-        <form align="right" name="form1" method="post">
-          <label class="logoutLblPos">
-            User Name
-            <input name="submit2" type="submit" id="submit2" value="Sign Out">
-          </label>
-        </form>
+<body class="container" style="border:2px solid; padding:5px">
+  <div class="container">
+    <header>
+      <img src="images/ACCESS_logo.png" alt="ACCESS LOGO" align="left"/>
+      <form align="right" name="form1" method="post">
+        <label class="logoutLblPos">
+          User Name
+          <input name="submit2" type="submit" id="submit2" value="Sign Out" style="margin: 30px 0px 0px 0px">
+        </label>
+      </form>
 
-      </header>
-    </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-3">
-          <ul class="nav nav-tabs nav-stacked"  style="border:2px solid;padding:10px">
-            <li class="btn btn-default"style="text-align:center;margin:10px"><a href="#">My Resources</a></li>
-            <li class="btn btn-default" style="text-align:center;margin:10px"><a href="#">Directory</a></li>
-            <li class="btn btn-default" style="text-align:center;margin:10px"><a href="#">Analysis</a></li>
-          </ul>
-        </div>
-
-        <div class="col-lg-8" style="border:2px solid;padding:5px">
-
+    </header>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3">
+        <ul class="nav nav-tabs nav-stacked"  style="border:2px solid;padding:10px">
+          <li class="btn btn-default"style="text-align:center;margin:10px"><a href="#">My Resources</a></li>
+          <li class="btn btn-default" style="text-align:center;margin:10px"><a href="#">Directory</a></li>
+          <li class="btn btn-default" style="text-align:center;margin:10px"><a href="#">Analysis</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-8" style="border:2px solid;padding:5px">
+        <table class="table table-striped" id="resource">
+          <thead>
+            <tr>
+              <td>Title</td>
+              <td>Type</td>
+              <td>Role</td>
+              <td>Last Modified Date</td>
+              </tr>
+            </thead>
+            <tr>
+              <td>A</td>
+              <td>B</td>
+              <td>C</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <td>D</td>
+              <td>A</td>
+              <td>B</td>
+              <td>2</td>
+            </tr>
+            <tr>
+              <td>B</td>
+              <td>C</td>
+              <td>D</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>C</td>
+              <td>D</td>
+              <td>A</td>
+              <td>4</td>
+            </tr>
+          </table>
         </div>
       </div>
     </div>
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.dataTables.js"></script>
+    <script src="js/dataTables.bootstrap.js"></script>
+    <script>
+      $('#resource').dataTable();
+    </script>
   </body>
   </html>
