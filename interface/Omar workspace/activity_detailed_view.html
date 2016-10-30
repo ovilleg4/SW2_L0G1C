@@ -33,7 +33,7 @@
     <div class="row">
       <!-- Menu section -->
       <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
-        <ul class="nav nav-tabs nav-stacked"  style="border:2px solid;padding:10px">
+        <ul class="nav nav-tabs nav-stacked" style="border:2px solid;padding:10px">
           <li class="btn btn-default"style="text-align:center;margin:10px"><a href="#">My Resources</a></li>
           <li class="btn btn-default" style="text-align:center;margin:10px"><a href="#">Directory</a></li>
           <li class="btn btn-default" style="text-align:center;margin:10px"><a href="#">Analysis</a></li>
@@ -41,40 +41,106 @@
       </div>
 
       <!-- Content Area section -->
-      <div class="col-lg-9 col-md-9 col-sm-9 col-xs-6" style="border:2px solid; padding:10px">
+      <div id="contentArea" class="col-lg-9 col-md-9 col-sm-9 col-xs-6" style="border:2px solid; padding:10px">
 
-        <h2 style="margin-top: 5px;font-size: 1.25em;padding-left: 5px">Initiative Detailed View</h2>
+        <!-- Page Title -->
+        <h2 style="margin-top: 5px;font-size: 1.25em;padding-left: 5px">Activity Detailed View</h2>
 
+        <!-- Activity Information Panel -->
         <div class="panel panel-default">
           <div class="panel-heading" style="background-color: #0a0f68;color: white">
-            <h3 class="panel-title">Initiative Information</h3>
+            <h3 class="panel-title">Activity Information</h3>
           </div>
           <div class="panel-body">
-            <!-- panel body goes in here -->
-            Initiative info. panel
+            <form class="col-lg-12 col-md-12"align="left" name="form2" method="post">
+              *Title<input type="text" name="activityTitle" placeholder="Activity Title"/><br>
+              *Start Date<input type="text" name="activityStartDate" placeholder="Start Date">
+              End Date<input type="text" name="activityEndDate" placeholder="End Date">
+              Keyword(s)<input type="text" name="activityEndDate" placeholder="Keywords"><br>
+              *Description<input type="text" name="activityDescription" placeholder="Description">
+              <h3 style="margin-top: 5px;font-size: 1.15em;padding-left: 5px"><b>Target Audience</b></h3>
+              *Classification<select name="Classifications" style="margin-top:0px">
+                  <option value="default">Classification</option>
+                  <option value="freshman">Freshman</option>
+                  <option value="sophomore">Sophomore</option>
+                  <option value="junior">Junior</option>
+                  <option value="senior">Senior</option>
+                  <option value="graduate">Graduate</option>
+              </select>
+              <input type="text" name="targetAudienceDescription" placeholder="Description"/>
+            </form>
           </div>
         </div>
 
+        <!-- Activity Course Mapping Information Panel -->
         <div class="panel panel-default">
           <div class="panel-heading" style="background-color: #0a0f68;color: white">
-            <h3 class="panel-title">Initiative Membership</h3>
+            <h3 class="panel-title">Activity Course Mapping Information</h3>
           </div>
           <div class="panel-body">
-            <!-- panel body goes in here -->
-            Initiative membership panel
+            <form align="left" name="form3" method="post">
+              *Classification<select name="Semester" style="margin-top:0px">
+                  <option value="default">Semester</option>
+                  <option value="freshman">Fall 2016</option>
+                  <option value="sophomore">Spring 2016</option>
+                  <option value="junior">Fall 2015</option>
+                  <option value="senior">Spring 2015</option>
+                  <option value="graduate">Fall 2014</option>
+              </select>
+              Course Name<input type="text" name="targetAudienceDescription" placeholder="Course Name [Example]"/>
+            </form>
           </div>
         </div>
 
+        <!-- Activity Particpant Information Panel -->
         <div class="panel panel-default">
           <div class="panel-heading" style="background-color: #0a0f68;color: white">
-            <h3 class="panel-title">Activities Associated with Initiative</h3>
+            <h3 class="panel-title">Activity Participant Information</h3>
           </div>
+
           <div class="panel-body">
-            <!-- panel body goes in here -->
-            Activities Associated panel
+
+            <div class="col-lg-8" style="border:2px solid;padding:5px">
+              <table class="table table-striped" id="resource">
+                <thead>
+                  <tr>
+                    <td>Title</td>
+                    <td>Type</td>
+                    <td>Role</td>
+                    <td>Last Modified Date</td>
+                    </tr>
+                  </thead>
+                  <tr>
+                    <td>A</td>
+                    <td>B</td>
+                    <td>C</td>
+                    <td>1</td>
+                  </tr>
+                  <tr>
+                    <td>D</td>
+                    <td>A</td>
+                    <td>B</td>
+                    <td>2</td>
+                  </tr>
+                  <tr>
+                    <td>B</td>
+                    <td>C</td>
+                    <td>D</td>
+                    <td>3</td>
+                  </tr>
+                  <tr>
+                    <td>C</td>
+                    <td>D</td>
+                    <td>A</td>
+                    <td>4</td>
+                  </tr>
+                </table>
+              </div>
+
           </div>
         </div>
 
+        <!-- Button Group -->
         <div class="col-lg-12" style="padding:0px">
           <div class="col-lg-3 col-md-3" align="left" style="padding-top:5px"><b>*Required field</b></div>
           <div class="col-lg-8 col-md-8" align="right" style="padding:0px">
