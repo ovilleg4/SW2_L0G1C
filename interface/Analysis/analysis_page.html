@@ -1,183 +1,177 @@
+<!-- Activity Detailed View page will be implemented here -->
 
 <!DOCTYPE html>
-<html>
+<html class="container">
 <head>
   <meta charset="utf-8">
-  <title>Analysis</title>
+  <title>ACCESS</title>
+
   <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/dataTables.bootstrap.min.css">
+
   <!-- Optional theme -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  <!--<link rel="stylesheet" href="../css/bootstrap-theme.min.css">-->
+
+  <style>
+  ::-webkit-input-placeholder {
+     text-align: center;
+  }
+  </style>
 
 </head>
-  <body class="container" style="border:3px solid; padding:8px">
-    <div class="container">
-      <header>
-        <img src=".../interface/images/ACCESS_logo.png" alt="ACCESS LOGO" align="left"/>
-        <form align="right" name="form1" method="post">
-          <label class="logoutLblPos">
-            User Name
-            <input name="submit2" type="submit" id="submit2" value="Sign Out">
-          </label>
-        </form>
+<body class="container">
 
-      </header>
-    </div>
-    <div class="container">
-      <ul class="nav nav-tabs nav-stacked col-sm-3"  >
-        <li style="text-align:center"><a href="#">My Resources</a></li>
-        <li style="text-align:center"><a href="#">Directory</a></li>
-        <li style="text-align:center"><a href="#">Analysis</a></li>
-      </ul>
-    </div>
-<div class="container">
-<h3>Welcome to Accelerating, Connecting, and Evaluating Student Success (ACCESS)</h3>
-
-
-</div>
-
-<div class="container">
-  <h2>Query</h2>
-
-  <div class="dropdown">
-	<label class="col-sm-2 control-label">Type</label>   
-	<button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">Type
-    <span class="caret"></span></button>
-    <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
-      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Activity</a></li>
-      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Banner</a></li>
-      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Digital Measures</a></li>
-      <li role="presentation" class="divider"></li>
-      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">About Us</a></li>
-    </ul>
+  <!-- Header section -->
+  <div class="container" style="padding-right:0px">
+    <header>
+      <img src="../images/ACCESS_logo.png" alt="ACCESS LOGO" align="left"/>
+      <form align="right" name="form1" method="post">
+        <label class="logoutLblPos">
+          User Name
+          <input name="submit2" type="submit" id="submit2" value="Sign Out" style="margin: 20px 0px 0px 10px">
+        </label>
+      </form>
+    </header>
   </div>
-</div>
 
-<div class="container">
-  <h2>Filters</h2>
- 
-  <div class="dropdown">
-    <label class="col-sm-2 control-label"> Category </label> 
-	<button class="btn btn-default dropdown-toggle" type="button" id="menu2" data-toggle="dropdown">Category
-    <span class="caret"></span></button>
-    <ul class="dropdown-menu" role="menu" aria-labelledby="menu2">
-      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Activity</a></li>
-      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Banner</a></li>
-      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Digital Measures</a></li>
-      <li role="presentation" class="divider"></li>
-      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">About Us</a></li>
-    </ul>
-  </div>
-</div>
-<div class="container">
+  <div class="container">
+    <div class="row">
+      <!-- Menu section -->
+      <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+        <ul class="nav nav-tabs nav-stacked" style="border:2px solid;padding:10px">
+          <li class="btn btn-default" style="text-align:center;margin:10px"><a href="#">My Resources</a></li>
+          <li class="btn btn-default" style="text-align:center;margin:10px"><a href="#">Directory</a></li>
+          <li class="btn btn-default" style="text-align:center;margin:10px"><a href="#">Analysis</a></li>
+        </ul>
+      </div>
 
-  <div class="dropdown">
-   <label class="col-sm-2 control-label">Classification</label>   
-   <button class="btn btn-default dropdown-toggle" type="button" id="menu3" data-toggle="dropdown">Classification
-    <span class="caret"></span></button>
-    <ul class="dropdown-menu" role="menu" aria-labelledby="menu3">
-      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Activity</a></li>
-      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Banner</a></li>
-      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Digital Measures</a></li>
-      <li role="presentation" class="divider"></li>
-      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">About Us</a></li>
-    </ul>
-  </div>
-</div>
+      <!-- Content Area section -->
+      <div id="contentArea" class="col-lg-9 col-md-9 col-sm-9 col-xs-6" style="border:2px solid; padding:30px">
 
-<div class="container">
-  
-  <form> <label class="col-sm-2 control-label">Graduate</label>
-    <div class="radio-inline">
-      <label><input type="radio" name="optradio">Yes</label>
-    </div>
-    <div class="radio-inline">
-      <label><input type="radio" name="optradio">No</label>
-    </div>
+        <!-- Page Title -->
+        <h2 style="margin-top: 5px;font-size: 1.25em;padding-left: 5px">Welcome to Accelerating, Connecting, and Evaluating Student Success (ACCESS)</h2>
+
+        <!-- Activity Information Panel -->
+        <div class="panel panel-default">
+          <div class="panel-heading" style="background-color: #0a0f68;color: white">
+            <h3 class="panel-title">Query</h3>
+          </div>
+          <div class="panel-body">
+            <form class="col-lg-12 col-md-12"align="left" name="form2" method="post">
+             
+                           
+              Type <select name="Type" style="margin-top:0px; width: 123px">
+                  <option value="default">Classification</option>
+                  <option value="freshman">Freshman</option>
+                  <option value="sophomore">Sophomore</option>
+                  <option value="junior">Junior</option>
+                  <option value="senior">Senior</option>
+                  <option value="graduate">Graduate</option>
+              </select>
+			  </div>
+     <br> <br>
+
+        <!-- Activity Course Mapping Information Panel -->
+        <div class="panel panel-default">
+          <div class="panel-heading" style="background-color: #0a0f68;color: white">
+            <h3 class="panel-title">Filters</h3>
+          </div>
+          <div class="panel-body">
+            <form align="left" name="form3" method="post">
+              Category <select name="Category" style="margin-top:0px">
+                  <option value="default">Category</option>
+                  <option value="C1">Cat 1</option>
+                  <option value="C2">Cat 2</option>
+                  <option value="C3">Cat 3</option>
+                  <option value="C4">Cat 4</option>
+                 
+              </select>
+			  <br><br>
+              Classification <select name="Classification" style="margin-top:0px">
+                  <option value="default">Classification</option>
+                  <option value="freshman">Freashman</option>
+                  <option value="sophomore">Sophomore</option>
+                  <option value="junior">Junior</option>
+                  <option value="senior">Senior</option>
+                  <option value="graduate">Graduate</option>
+              </select>
+			  <br> <br>
+			  	  <form> <label class="col-sm-3 control-label">Graduate </label>
+    <label class="radio-inline"><input type="radio" name="Gradyes">Yes</label>
+    <label class="radio-inline"> <input type="radio" name="Gradno">No</label>
     
-  </form>
-</div>
+			  <br><br>
+			   Major Field   <select name="MF" style="margin-top:0px">
+                  <option value="default">Major Field</option>
+                  <option value="CS">Computer Science</option>
+                  <option value="Engineerings">Engineering</option>
+                  <option value="Physics">Physics</option>
+             
+              </select>
+			  <br><br>
+			   Department  <select name="Department" style="margin-top:0px">
+                  <option value="default">Department</option>
+                  <option value="math">Math</option>
+                  <option value="science">Science</option>
+                  <option value="education">Education</option>
+                  <option value="business">Business</option>
+                  </select>
+			  
+            </form>
+          </div>
+        </div>
 
-<div class="container">
-   <form>
-   <div class="dropdown">
-	<label class="col-sm-2 control-label">Major Field</label>   
-	<button class="btn btn-default dropdown-toggle" type="button" id="menu4" data-toggle="dropdown">Major
-    <span class="caret"></span></button>
-    <ul class="dropdown-menu" role="menu" aria-labelledby="menu4">
-      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Activity</a></li>
-      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Banner</a></li>
-      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Digital Measures</a></li>
-      <li role="presentation" class="divider"></li>
-      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">About Us</a></li>
-    </ul>
-  </div>
-</div>
-      <br> 
-<div class="container">
- 
+        <!-- Activity Particpant Information Panel -->
+        <div class="panel panel-default">
+          <div class="panel-heading" style="background-color: #0a0f68;color: white">
+            <h3 class="panel-title">Restrictions</h3>
+          </div>
 
-  <div class="dropdown">
-	<label class="col-sm-2 control-label">Department</label>   
-	<button class="btn btn-default dropdown-toggle" type="button" id="menu5" data-toggle="dropdown">Department
-    <span class="caret"></span></button>
-    <ul class="dropdown-menu" role="menu" aria-labelledby="menu5">
-      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Activity</a></li>
-      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Banner</a></li>
-      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Digital Measures</a></li>
-      <li role="presentation" class="divider"></li>
-      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">About Us</a></li>
-    </ul>
-  </div>
-</div>	  
-	  </form>
-</div>
-
-
-<div class="container">
-  <h2>Restrictions</h2>
-
-  <div class="dropdown">
-	<label class="col-sm-2 control-label">Time to Degree</label>   
-	<button class="btn btn-default dropdown-toggle" type="button" id="menu6" data-toggle="dropdown">Time to Degree
-    <span class="caret"></span></button>
-    <ul class="dropdown-menu" role="menu" aria-labelledby="menu6">
-      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Fall</a></li>
-      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Summer</a></li>
-      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Spring</a></li>
-      <li role="presentation" class="divider"></li>
-      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">About Us</a></li>
-    </ul>
-	  </div>
-	  <form> <label class="col-sm-2 control-label">Under-Graduate to Graduate Advancement</label>
-    <div class="radio-inline">
-      <label><input type="radio" name="optradio">Yes</label>
-    </div>
-    <div class="radio-inline">
-      <label><input type="radio" name="optradio">No</label>
-    </div>
+          <div class="panel-body">
+ <form class="col-lg-12 col-md-12"align="left" name="form2" method="post">
+             
+                           
+              Time to Degree <select name="TimeDegree" style="margin-top:0px; width: 123px">
+                  <option value="default">Time to Degree</option>
+                  <option value="summer">Summer</option>
+                  <option value="spring">Spring</option>
+                   <option value="fall">Fall</option>
+              </select>
+     <br>
+            <div class="col-lg-12 col-md-12">
+              </div>
+              
+	  <form> <label class="col-sm-3 control-label">Under-Graduate to Graduate Advancement</label>
+    <label class="radio-inline"><input type="radio" name="optradio yes">Yes</label>
+    <label class="radio-inline"> <input type="radio" name="optradio no">No</label>
     
-  </form>
-</div>
+			 
+          </div>
+        </div>
 
-<div class="container">
-  <h2>Button Tags</h2>
-  <a href="#" class="btn btn-default" role="button">Download Result</a>
-  <button type="button" class="btn btn-default">Cancel</button>
-  
-</div>
+        <!-- Button Group -->
+        <div class="col-lg-12" style="padding:0px">
+       
+          <div class="col-lg-9 col-md-9" align="right" style="padding:0px">
+             <br><br>
+              <button type="button" name="button">Download Result</button>
+              <button type="button" name="button">Cancel</button>
+          </div>
+        </div>
+      </div>
 
+    
+  </div>
 
-
-
-
+  <script src="../js/jquery-3.1.1.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/jquery.dataTables.js"></script>
+  <script src="../js/dataTables.bootstrap.js"></script>
+  <script>
+    $('#resource').dataTable({
+      "lengthMenu": [5], "lengthChange": false
+    });
+  </script>
 </body>
-</html>
-
-
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-  </body>
 </html>
