@@ -1,0 +1,25 @@
+#body{
+  border: 2px solid;
+  padding: 5px;
+  height: 650px;
+}
+
+#submit2{
+  margin-top: 30px;
+  margin-right: 27px;
+}
+
+#menu{
+  border: 2px solid;
+  margin-right: 30px;
+  margin-left: 25px;
+}
+
+#table{
+  border:2px solid;
+  padding:5px;
+}
+
+::-webkit-input-placeholder {
+   text-align: center;
+}

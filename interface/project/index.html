@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html class="container" style="border:2px solid">
+<head>
+  <meta charset="utf-8">
+  <title>ACCESS</title>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/dataTables.bootstrap.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <!-- <link rel="stylesheet" href="../css/bootstrap-theme.min.css"> -->
+
+</head>
+<body class="container"  style="height:100vh">
+  <div class="container">
+    <header>
+      <img src="../images/ACCESS_logo.png" alt="ACCESS LOGO" align="left"/>
+      <form align="right" name="form1" method="post">
+        <label class="logoutLblPos">
+          User Name
+          <input name="submit2" type="submit" id="submit2" value="Sign Out">
+        </label>
+      </form>
+
+    </header>
+  </div>
+  <div class="container" style="height:100%">
+    <div class="row" style="height:100%">
+      <div class="col-lg-3 col-md-3 col-sm-3" id="menu">
+        <ul class="nav nav-tabs nav-stacked">
+          <li class="btn btn-default" style="text-align:center;margin:10px"><a href="#">My Resources</a></li>
+          <li class="btn btn-default" style="text-align:center;margin:10px"><a href="#">Directory</a></li>
+          <li class="btn btn-default" style="text-align:center;margin:10px"><a href="#">Analysis</a></li>
+        </ul>
+      </div>
+      <!-- Project Panels -->
+      <div class="col-lg-8 col-md-8 col-sm-8" id="table" height="100%">
+        <!-- Page Title -->
+        <h2 style="margin-top: 5px;font-size: 1.25em;padding-left: 5px">Project Detailed View</h2>
+        <!-- Funded Project Radio -->
+        <div class="container">
+          <form> <label class="col-sm-2 control-label">*Funded Project?</label>
+            <div class="radio-inline">
+              <label><input type="radio" name="optradio">Yes</label>
+            </div>
+            <div class="radio-inline">
+              <label><input type="radio" name="optradio">No</label>
+            </div>
+          </form>
+        </div>
+        <!-- Project Information -->
+        <div class="panel panel-default">
+          <div class="panel-heading" style="background-color: #0a0f68;color: white">
+            <h3 class="panel-title">Project Information</h3>
+          </div>
+          <div class="panel-body">
+            <form class="col-lg-12 col-md-12"  method="post">
+              *Title  <input type="text" style="width:650px" name="title"><br><br>
+              *Category <select class="" name="category" style="width:124px">
+              <option value="">Option 1</option>
+              <option value="">Option 2</option>
+              <option value="">Option 3</option>
+              <option value="">Option 4</option>
+              <option value="">Option 5</option>
+            </select>
+            *Start Date <input type="date" name="startDate" style="width:175px">
+            End Date <input type="date" name="endDate" style="width:175px"><br><br>
+            *Description <input type="text" name="description" style="width:323px">
+            Keyword(s) <input type="text" name="keywords">
+            <button type="button" name="add-keyword">+</button><br><br>
+            Goal(s) <input type="text" name="purpose" style="width:600px">
+            <button type="button" name="add-purpose">+</button><br><br>
+            *Document Type <select name="document-type" style="width:124px">
+            <option value="">Option 1</option>
+            <option value="">Option 2</option>
+            <option value="">Option 3</option>
+          </select>
+          <input type="text" name="link" style="width:420px">
+          <button type="button" name="add-purpose">+</button><br><br>
+          Website <input type="text" name="website" style="width:602px">
+          <button type="button" name="add-purpose">+</button><br><br>
+        </form>
+      </div>
+    </div>
+    <!-- Project Membership-->
+    <div class="panel panel-default">
+      <div class="panel-heading" style="background-color: #0a0f68;color: white">
+        <h3 class="panel-title">Project Information</h3>
+      </div>
+      <div class="panel-body">
+        <div class="col-lg-12 col-md-12 col-sm-12">
+          <table class="table table-bordered" id="init-member">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Role</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tr>
+              <td align="center"><input style="text;width:140px" placeholder="Search by Name"></td>
+              <td align="center"><input style="text;width:140px" placeholder="Search by Email"></td>
+              <td align="center"><input style="text;width:140px" placeholder="Search by Role"></td>
+              <td align="center"><button type="button" name="delete-member">X</button></td>
+            </tr>
+          </table>
+          <div align="right">
+            <button type"button" name="add-new-member">Add Member</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Activities Associated with Project-->
+    <div class="panel panel-default">
+      <div class="panel-heading" style="background-color: #0a0f68;color: white">
+        <h3 class="panel-title">Activities Associated with Project </h3>
+      </div>
+      <div class="panel-body">
+        <table class="table table-bordered" id="activities">
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>Description</th>
+              <th>Creation Date</th>
+              <th>Linked Project</th>
+              <th>Owner</th>
+            </tr>
+          </thead>
+          <tr>
+            <td><a href="#">Initiative 1</a></td>
+            <td>Description 1</td>
+            <td>mm/dd/yyyy</td>
+            <td>No</td>
+            <td><a href="#">Owner A</a></td>
+          </tr>
+          <tr>
+            <td><a href="#">Initiative 2</a></td>
+            <td>Description 2</td>
+            <td>mm/dd/yyyy</td>
+            <td>Yes</td>
+            <td><a href="#">Owner B</a></td>
+          </tr>
+          <tr>
+            <td><a href="#">Initiative 3</a></td>
+            <td>Description 3</td>
+            <td>mm/dd/yyyy</td>
+            <td>No</td>
+            <td><a href="#">Owner A</a></td>
+          </tr>
+        </table>
+        <div align="right" style="margin-top:10px">
+          <button type="button" name="button" style="margin-right:5px">Add Initiative</button>
+          <button type="button" name="button" style="margin-right:5px">Link Existing Initiative</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-5"align="left">
+      *Required Fields
+    </div>
+    <div class="col-lg-7" align="right">
+      <button type="button" name="button" style="margin-right:5px">Save</button>
+      <button type="button" name="button" style="margin-right:5px">Save & Return</button>
+      <button type="button" name "button" style="margin-right:5px">Delete</button>
+      <button type="button" name "button">Cancel</button>
+    </div>
+  </div>
+  <div class="container">
+
+  </div>
+</div>
+</div>
+<script src="../js/jquery-3.1.1.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/jquery.dataTables.js"></script>
+<script src="../js/dataTables.bootstrap.js"></script>
+<script>
+  $('#init-member').dataTable({
+    "lengthMenu": [5], "lengthChange": false
+  });
+
+  $('#activities').dataTable({
+    "lengthMenu": [5], "lengthChange": false
+  })
+</script>
+</body>
+</html>

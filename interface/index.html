@@ -1,37 +1,153 @@
 <!DOCTYPE html>
-<html>
+<html style="height:100%">
 <head>
   <meta charset="utf-8">
   <title>ACCESS</title>
   <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-  <!-- Optional theme -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/dataTables.bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/bootstrap-theme.min.css">
 
 </head>
-  <body class="container" style="border:2px solid; padding:5px">
-    <div class="container">
-      <header>
-        <img src="images/ACCESS_logo.png" alt="ACCESS LOGO" align="left"/>
-        <form align="right" name="form1" method="post">
-          <label class="logoutLblPos">
-            User Name
-            <input name="submit2" type="submit" id="submit2" value="Sign Out">
-          </label>
-        </form>
+<body class="container" id="body">
+  <div class="container">
+    <header>
+      <img src="images/ACCESS_logo.png" alt="ACCESS LOGO" align="left"/>
+      <form align="right" name="form1" method="post">
+        <label class="logoutLblPos">
+          User Name
+          <input name="submit2" type="submit" id="submit2" value="Sign Out">
+        </label>
+      </form>
 
-      </header>
+    </header>
+  </div>
+  <div class="container" style="height:100%">
+    <div class="row" style="height:100%">
+      <div class="col-lg-3 col-md-3 col-sm-3" id="menu">
+        <ul class="nav nav-tabs nav-stacked">
+          <li class="btn btn-default" style="text-align:center;margin:10px"><a href="#">My Resources</a></li>
+          <li class="btn btn-default" style="text-align:center;margin:10px"><a href="#">Directory</a></li>
+          <li class="btn btn-default" style="text-align:center;margin:10px"><a href="#">Analysis</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-8 col-md-8 col-sm-8" id="table">
+        <table class="table table-striped" id="resource">
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>Type</th>
+              <th>Role</th>
+              <th>Last Modified Date</th>
+              </tr>
+            </thead>
+            <tr>
+              <td><a href="#">Project A</a></td>
+              <td>Project</td>
+              <td>Owner</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <td><a href="#">Initiative A</a></td>
+              <td>Initiative</td>
+              <td>IA</td>
+              <td>2</td>
+            </tr>
+            <tr>
+              <td><a href="#">Project B</a></td>
+              <td>Project</td>
+              <td>PA</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td><a href="#">Project C</a></td>
+              <td>Project</td>
+              <td>PA</td>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td><a href="#">Project C</a></td>
+              <td>Project</td>
+              <td>PA</td>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td><a href="#">Project C</a></td>
+              <td>Project</td>
+              <td>PA</td>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td><a href="#">Project C</a></td>
+              <td>Project</td>
+              <td>PA</td>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td><a href="#">Project C</a></td>
+              <td>Project</td>
+              <td>PA</td>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td><a href="#">Project C</a></td>
+              <td>Project</td>
+              <td>PA</td>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td><a href="#">Project C</a></td>
+              <td>Project</td>
+              <td>PA</td>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td><a href="#">Project C</a></td>
+              <td>Project</td>
+              <td>PA</td>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td><a href="#">Project C</a></td>
+              <td>Project</td>
+              <td>PA</td>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td><a href="#">Project C</a></td>
+              <td>Project</td>
+              <td>PA</td>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td><a href="#">Project C</a></td>
+              <td>Project</td>
+              <td>PA</td>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td><a href="#">Project C</a></td>
+              <td>Project</td>
+              <td>PA</td>
+              <td>4</td>
+            </tr>
+          </table>
+        </div>
+        <div class="container">
+          <div class="col-lg-12" align="right" style="margin-top:10px">
+            <button type="button" name="button" style="margin-right:5px">Add Project</button>
+            <button type="button" name="button" style="margin-right:25px">Add Initiative</button>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="container">
-      <ul class="nav nav-tabs nav-stacked col-sm-3"  style="border:2px solid;padding:5px">
-        <li style="text-align:center"><a href="#">My Resources</a></li>
-        <li style="text-align:center"><a href="#">Directory</a></li>
-        <li style="text-align:center"><a href="#">Analysis</a></li>
-      </ul>
-    </div>
-
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.dataTables.js"></script>
+    <script src="js/dataTables.bootstrap.js"></script>
+    <script>
+      $('#resource').dataTable({"lengthChange":false});
+    </script>
   </body>
-</html>
+  </html>
