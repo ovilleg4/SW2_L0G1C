@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html class="container" style="border:2px solid" >
+<head>
+  <meta charset="utf-8">
+  <title>ACCESS</title>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/dataTables.bootstrap.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/bootstrap-theme.min.css">
+
+</head>
+<body class="container"  style="height:100vh">
+  <div class="container">
+    <header>
+      <img src="../images/ACCESS_logo.png" alt="ACCESS LOGO" align="left"/>
+      <form align="right" name="form1" method="post">
+        <label class="logoutLblPos">
+          User Name
+          <input name="submit2" type="submit" id="submit2" value="Sign Out">
+        </label>
+      </form>
+
+    </header>
+  </div>
+  <div class="container" style="height:100%">
+    <div class="row" style="height:100%">
+      <div class="col-lg-3 col-md-3 col-sm-3" id="menu">
+        <ul class="nav nav-tabs nav-stacked">
+          <li class="btn btn-default" style="text-align:center;margin:10px"><a href="#">My Resources</a></li>
+          <li class="btn btn-default" style="text-align:center;margin:10px"><a href="#">Directory</a></li>
+          <li class="btn btn-default" style="text-align:center;margin:10px"><a href="#">Analysis</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-8 col-md-8 col-sm-8" id="table" height="100%">
+        <!-- Initiative Information -->
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Project Information</h3>
+          </div>
+          <div class="panel-body">
+            <form class="" action="index.html" method="post">
+              *Title <input type="text" name="title"></br></br>
+              *Category <select class="" name="category">
+                <option value="">Option 1</option>
+                <option value="">Option 2</option>
+                <option value="">Option 3</option>
+                <option value="">Option 4</option>
+                <option value="">Option 5</option>
+              </select>
+              *Start Date <input type="date" name="startDate">
+              End Date <input type="date" name="endDate"></br></br>
+              *Description <input type="text" name="description">
+              Keyword(s) <input type="text" name="keywords">
+              <button type="button" name="add-keyword">+</button></br></br>
+              Purpose <input type="text" name="purpose">
+              <button type="button" name="add-purpose">+</button></br></br>
+              *Document Type <select name="document-type">
+                <option value="">Option 1</option>
+                <option value="">Option 2</option>
+                <option value="">Option 3</option>
+              </select>
+              <input type="text" name="link">
+              <button type="button" name="add-purpose">+</button></br></br>
+              Website <input type="text" name="website">
+              <button type="button" name="add-purpose">+</button></br></br>
+
+            </form>
+          </div>
+        </div>
+        <!-- Initiative Membership-->
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Initiative Information</h3>
+          </div>
+          <div class="panel-body">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+              <table class="table table-bordered" id="init-member">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Role</th>
+                    <th>Action</th>
+                    </tr>
+                  </thead>
+                  <tr>
+                    <td><a href="#">John Doe</a></td>
+                    <td>jdoe@utep.edu</td>
+                    <td>Owner</td>
+                    <td align="center"><button type="button" name="delete-member">X</button></td>
+                  </tr>
+                </table>
+                <div align="right">
+                  <button type"button" name="add-new-member">Add Member</button>
+                </div>
+              </div>
+          </div>
+        </div>
+        <!-- Activities Associated with Initiative-->
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Activities Associated with Initiative </h3>
+          </div>
+          <div class="panel-body">
+            <table class="table table-bordered" id="activities">
+              <thead>
+                <tr>
+                  <th>Title</th>
+                  <th>Description</th>
+                  <th>Creation Date</th>
+                  <th>Linked Initiative</th>
+                  <th>Owner</th>
+                  </tr>
+                </thead>
+                <tr>
+                  <td><a href="#">Activity 1</a></td>
+                  <td>Description 1</td>
+                  <td>mm/dd/yyyy</td>
+                  <td>No</td>
+                  <td><a href="#">Owner A</a></td>
+                </tr>
+                <tr>
+                  <td><a href="#">Activity 2</a></td>
+                  <td>Description 2</td>
+                  <td>mm/dd/yyyy</td>
+                  <td>Yes</td>
+                  <td><a href="#">Owner B</a></td>
+                </tr>
+                <tr>
+                  <td><a href="#">Activity 3</a></td>
+                  <td>Description 3</td>
+                  <td>mm/dd/yyyy</td>
+                  <td>No</td>
+                  <td><a href="#">Owner A</a></td>
+                </tr>
+              </table>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="col-lg-5"align="right">
+          *Required Fields
+        </div>
+        <div class="col-lg-7" align="right" style="margin-top:10px">
+          <button type="button" name="button" style="margin-right:5px">Save</button>
+          <button type="button" name="button" style="margin-right:5px">Save & Return</button>
+          <button type="button" name "button" style="margin-right:5px">Delete</button>
+          <button type="button" name "button" style="margin-right:25px">Cancel</button>
+        </div>
+        </div>
+      </div>
+    </div>
+    <script src="../js/jquery-3.1.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery.dataTables.js"></script>
+    <script src="../js/dataTables.bootstrap.js"></script>
+    <script>
+      $('#init-member').dataTable({
+        "lengthMenu": [5], "lengthChange": false
+      });
+
+      $('#activities').dataTable({
+        "lengthMenu": [5], "lengthChange": false
+      })
+    </script>
+  </body>
+  </html>
