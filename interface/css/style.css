@@ -13,10 +13,13 @@
   border: 2px solid;
   margin-right: 30px;
   margin-left: 25px;
-  height: 80.5%;
 }
 
 #table{
   border:2px solid;
   padding:5px;
+}
+
+::-webkit-input-placeholder {
+   text-align: center;
 }
