@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html class="container">
+<head>
+  <meta charset="utf-8">
+  <title>ACCESS</title>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/dataTables.bootstrap.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <!-- <link rel="stylesheet" href="../css/bootstrap-theme.min.css"> -->
+
+</head>
+<body class="container"  style="height:100vh">
+  <div class="container">
+    <header>
+      <img src="../images/ACCESS_logo.png" alt="ACCESS LOGO" align="left"/>
+      <form align="right" name="form1" method="post">
+        <label class="logoutLblPos">
+          User Name
+          <input name="submit2" type="submit" id="submit2" value="Sign Out">
+        </label>
+      </form>
+
+    </header>
+  </div>
+  <div class="container" style="height:100%">
+    <div class="row" style="height:100%">
+      <div class="col-lg-3 col-md-3 col-sm-3" id="menu">
+        <ul class="nav nav-tabs nav-stacked">
+          <li class="btn btn-default" style="text-align:center;margin:10px"><a href="../index.html">My Resources</a></li>
+          <li class="btn btn-default" style="text-align:center;margin:10px"><a href="../directory/index.html">Directory</a></li>
+          <li class="btn btn-default" style="text-align:center;margin:10px"><a href="../Analysis/index.html">Analysis</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-8 col-md-8 col-sm-8" id="table" height="100%">
+        <div class="container">
+        </div>
+        <!-- Project Information -->
+        <div class="panel panel-default">
+          <div class="panel-heading" style="background-color: #0a0f68;color: white">
+            <h3 class="panel-title">Link Existing Activity</h3>
+          </div>
+          <div class="panel-body">
+            Please select an activity<br><br>
+            <table class="table table-bordered" id="resource">
+              <thead>
+                <tr>
+                  <th>Title</th>
+                  <th>Description</th>
+                  <th>Creation Date</th>
+                  <th>Linked Initiative</th>
+                  <th>Owner</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><input type="radio"> <a href="#">Activity Title 1</a></td>
+                  <td>Description 1</td>
+                  <td>mm-dd-yyyy</td>
+                  <td>No</td>
+                  <td><a href="#">Owner A</a></td>
+                </tr>
+                <tr>
+                  <td><input type="radio"> <a href="#">Activity Title 2</a></td>
+                  <td>Description 2</td>
+                  <td>mm-dd-yyyy</td>
+                  <td>Yes</td>
+                  <td><a href="#">Owner B</a></td>
+                </tr>
+                <tr>
+                  <td><input type="radio"> <a href="#">Activity Title 3</a></td>
+                  <td>Description 3</td>
+                  <td>mm-dd-yyyy</td>
+                  <td>No</td>
+                  <td><a href="#">Owner C</a></td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8" align="center">
+                  <button type="button" name="button">Select</button>
+                  <button type="button" name="button">Cancel</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="../js/jquery-3.1.1.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/jquery.dataTables.js"></script>
+  <script src="../js/dataTables.bootstrap.js"></script>
+  <script>
+  $('#resource').dataTable({
+    "lengthMenu": [5], "lengthChange": false
+  });
+  </script>
+</body>
+</html>
