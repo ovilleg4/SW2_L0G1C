@@ -1,0 +1,165 @@
+<!-- Activity Detailed View page will be implemented here -->
+
+<!DOCTYPE html>
+<html class="container">
+<head>
+  <meta charset="utf-8">
+  <title>ACCESS</title>
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/dataTables.bootstrap.min.css">
+
+  <style>
+  ::-webkit-input-placeholder {
+     text-align: center;
+  }
+  </style>
+
+</head>
+<body class="container">
+
+  <!-- Header section -->
+  <div class="container" style="padding-right:0px">
+    <header>
+      <img src="../images/ACCESS_logo.png" alt="ACCESS LOGO" align="left"/>
+      <form align="right" name="form1" method="post">
+        <label class="logoutLblPos">
+          User Name
+          <input name="submit2" type="submit" id="submit2" value="Sign Out" style="margin: 20px 0px 0px 10px">
+        </label>
+      </form>
+    </header>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <!-- Menu section -->
+      <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+        <ul class="nav nav-tabs nav-stacked" style="border:2px solid;padding:10px">
+          <li class="btn btn-default" style="text-align:center;margin:10px"><a href="#">My Resources</a></li>
+          <li class="btn btn-default" style="text-align:center;margin:10px"><a href="#">Directory</a></li>
+          <li class="btn btn-default" style="text-align:center;margin:10px"><a href="#">Analysis</a></li>
+        </ul>
+      </div>
+
+      <!-- Content Area section -->
+      <div id="contentArea" class="col-lg-9 col-md-9 col-sm-9 col-xs-6" style="border:2px solid; padding:10px">
+
+        <!-- Page Title -->
+        <h2 style="margin-top: 10px;font-size: 1.25em;padding-left: 5px" align="center">Welcome to Accelerating,
+        Connecting, and Evaluating Student Success (ACCESS)</h2><br>
+
+        <div class="panel panel-default">
+          <div class="panel-heading" style="background-color: #0a0f68;color: white">
+            <h3 class="panel-title">Activity Information</h3>
+          </div>
+          <div class="panel-body">
+          <form class="col-lg-12 col-md-12" align="left" name="form2" method="post">
+            Search by College <select name="searchByCollege" style="margin-top:0px; width: 123px">
+                <option value="default">Classification</option>
+                <option value="freshman">Freshman</option>
+                <option value="sophomore">Sophomore</option>
+                <option value="junior">Junior</option>
+                <option value="senior">Senior</option>
+                <option value="graduate">Graduate</option>
+            </select><br><br>
+            Search by Department <select name="searchByDepartment" style="margin-top:0px; width: 123px">
+                <option value="default">Classification</option>
+                <option value="freshman">Freshman</option>
+                <option value="sophomore">Sophomore</option>
+                <option value="junior">Junior</option>
+                <option value="senior">Senior</option>
+                <option value="graduate">Graduate</option>
+            </select><br><br>
+            Search by Category <select name="searchByCategory" style="margin-top:0px; width: 123px">
+                <option value="default">Classification</option>
+                <option value="freshman">Freshman</option>
+                <option value="sophomore">Sophomore</option>
+                <option value="junior">Junior</option>
+                <option value="senior">Senior</option>
+                <option value="graduate">Graduate</option>
+            </select><br><br>
+            Search by Date &nbsp;<select name="searchByDate" style="margin-left:0px; width: 123px">
+                <option value="default">Classification</option>
+                <option value="freshman">Freshman</option>
+                <option value="sophomore">Sophomore</option>
+                <option value="junior">Junior</option>
+                <option value="senior">Senior</option>
+                <option value="graduate">Graduate</option>
+            </select><br><br>
+            Search by Keyword<input type="text" name="searchByKeyword" placeholder="Keyword"><br><br>
+            Show all Initiatives<button onclick="window.location='../activity/index.html'">Show All</button>
+        </div>
+      </div>
+
+          <!--<div class="container"> -->
+          <div class="panel panel-default">
+            <div class="panel-heading" style="background-color: #0a0f68;color: white">
+              <h3 class="panel-title">Activity Information</h3>
+            </div>
+            <div class="panel-body">
+            <table class="table table-bordered" id="resource" style="width:100%">
+              <thead>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td>Initiative Title</td>
+                  <td>Initiative Description</td>
+                  <td>Category</td>
+                  <td>Owner</td>
+                  <td>Creation Date</td>
+                </tr>
+              </thead>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td>Intiative Tile 1</td>
+                  <td>Description 1</td>
+                  <td>Category A</td>
+                  <td>Ownwer A</td>
+                  <td>MM-DD-YYYY</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td>Intiative Tile 1</td>
+                  <td>Description 1</td>
+                  <td>Category A</td>
+                  <td>Ownwer A</td>
+                  <td>MM-DD-YYYY</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td>Intiative Tile 1</td>
+                  <td>Description 1</td>
+                  <td>Category A</td>
+                  <td>Ownwer A</td>
+                  <td>MM-DD-YYYY</td>
+                </tr>
+            </table><br>
+
+            Download Summary Report as Excel
+            <img src="..\images\excelIcon.png" alt="excel image">
+            or PDF
+            <img src="..\images\fileIcon.png" alt="file image"><br>
+
+            Download Detailed Report as Excel
+            <img src="..\images\excelIcon.png" alt="excel image">
+            or PDF
+            <img src="..\images\fileIcon.png" alt="file image"><br>
+
+          </div>
+        </div>
+        </div>
+    </div>
+  </div>
+
+  <script src="../js/jquery-3.1.1.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/jquery.dataTables.js"></script>
+  <script src="../js/dataTables.bootstrap.js"></script>
+  <script>
+    $('#resource').dataTable({
+      "lengthMenu": [5], "lengthChange": false
+    });
+  </script>
+</body>
+</html>
