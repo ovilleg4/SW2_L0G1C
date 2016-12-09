@@ -6,7 +6,7 @@ public class Activity extends Resource{
 	private String Classification;
 	private String Semester;
 	private String CourseName;
-	//private Record[] Participants; // Repalace Record with type of participants
+	//private Record[] Participants; //Repalace Record with type of participants
 	private int AssocInitID;
 	
 	public Activity(){

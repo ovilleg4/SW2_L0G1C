@@ -3,9 +3,9 @@ public class User {
     private String userType;
 
     boolean checkUserReadAccess(int ID) {
-	for (int i = 0; i < this.roles.length; i++)
-	    if (this.roles[i].getID() == ID && this.roles[i].hasReadAccess())
-		return true;
-	return false;
+    	for (int i = 0; i < this.roles.length; i++)
+    		if (this.roles[i].getResourceID() == ID && this.roles[i].hasReadAccess())
+    			return true;
+    	return false;
     }
 }
