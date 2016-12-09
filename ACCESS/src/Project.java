@@ -9,7 +9,7 @@ public class Project extends Resource{
 	private String DocumentType;
 	private String Website;
 	private File Attachment;
-	//private Record[] Membership; //Record is a place holder for the type of members associated with this project
+	private ArrayList<User> Membership; //Record is a place holder for the type of members associated with this project
 	private ArrayList<Integer> AssocInitId;  //list of Initiative ID's
 	
 	public Project(){
@@ -26,6 +26,10 @@ public class Project extends Resource{
 	
 	public void addKeyword(String keyword){
 		Keywords.add(keyword);
+	}
+	
+	public void addMember(User user){
+		Membership.add(user);
 	}
 	
 	public void setDocumentType(String documentType){
@@ -67,4 +71,9 @@ public class Project extends Resource{
 	public File getAttachment(){
 		return Attachment;
 	}
+	
+	public ArrayList<User> getMembers(){
+		return Membership;
+	}
+	
 }

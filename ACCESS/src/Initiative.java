@@ -5,7 +5,7 @@ public class Initiative extends Resource{
 
 	private File Attachment;
 	private String Website;
-	//private Record[] Membership; //replace record with membership type
+	private ArrayList<User> Membership; //replace record with membership type
 	private int AssocPID;
 	private ArrayList<Integer> AssocActID;
 	
@@ -29,6 +29,10 @@ public class Initiative extends Resource{
 		AssocActID.add(actID);
 	}
 	
+	public void addMember(User user){
+		Membership.add(user);
+	}
+	
 	public File getAttachement(){
 		return Attachment;
 	}
@@ -43,5 +47,9 @@ public class Initiative extends Resource{
 	
 	public ArrayList<Integer> getAssocActID(){
 		return AssocActID;
+	}
+	
+	public ArrayList<User> getMemberships(){
+		return Membership;
 	}
 }	

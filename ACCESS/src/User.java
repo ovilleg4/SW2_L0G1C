@@ -13,7 +13,7 @@ public class User {
     }
     
     //check project permissions
-    boolean checkProjectUpdateAccess(int ID) {
+    public boolean checkProjectUpdateAccess(int ID) {
     	for (int i = 0; i < roles.size(); i++){
     		if (roles.get(i).getResourceID() == ID && roles.get(i).hasUpdateProject()){
     			return true;
@@ -22,7 +22,7 @@ public class User {
     	return false;
     }
     
-    boolean checkProjectDeleteAccess(int ID) {
+    public boolean checkProjectDeleteAccess(int ID) {
     	for (int i = 0; i < roles.size(); i++){
     		if (roles.get(i).getResourceID() == ID && roles.get(i).hasDeleteProject()){
     			return true;
@@ -31,7 +31,7 @@ public class User {
     	return false;
     }
     
-    boolean checkProjectReadAccess(int ID) {
+    public boolean checkProjectReadAccess(int ID) {
     	for (int i = 0; i < roles.size(); i++){
     		if (roles.get(i).getResourceID() == ID && roles.get(i).hasReadProject()){
     			return true;
@@ -41,7 +41,7 @@ public class User {
     }
     
     // check initiative permissions
-    boolean checkInitiativeCreateAccess(int ID) {
+    public boolean checkInitiativeCreateAccess(int ID) {
     	for (int i = 0; i < roles.size(); i++){
     		if (roles.get(i).getResourceID() == ID && roles.get(i).hasCreateInitiative()){
     			return true;
@@ -50,7 +50,7 @@ public class User {
     	return false;
     }
     
-    boolean checkInitiativeLinkAccess(int ID) {
+    public boolean checkInitiativeLinkAccess(int ID) {
     	for (int i = 0; i < roles.size(); i++){
     		if (roles.get(i).getResourceID() == ID && roles.get(i).hasLinkInitiative()){
     			return true;
@@ -59,7 +59,7 @@ public class User {
     	return false;
     }
     
-    boolean checkInitiativeUpdateAccess(int ID) {
+    public boolean checkInitiativeUpdateAccess(int ID) {
     	for (int i = 0; i < roles.size(); i++){
     		if (roles.get(i).getResourceID() == ID && roles.get(i).hasUpdateInitiative()){
     			return true;
@@ -68,7 +68,7 @@ public class User {
     	return false;
     }
     
-    boolean checkInitiativeDeleteAccess(int ID) {
+    public boolean checkInitiativeDeleteAccess(int ID) {
     	for (int i = 0; i < roles.size(); i++){
     		if (roles.get(i).getResourceID() == ID && roles.get(i).hasDeleteInitiative()){
     			return true;
@@ -77,7 +77,7 @@ public class User {
     	return false;
     }
     
-    boolean checkInitiativeReadAccess(int ID) {
+    public boolean checkInitiativeReadAccess(int ID) {
     	for (int i = 0; i < roles.size(); i++){
     		if (roles.get(i).getResourceID() == ID && roles.get(i).hasReadInitiative()){
     			return true;
@@ -87,7 +87,7 @@ public class User {
     }
     
     //check Activity permissions
-    boolean checkActivityCreateAccess(int ID) {
+    public boolean checkActivityCreateAccess(int ID) {
     	for (int i = 0; i < roles.size(); i++){
     		if (roles.get(i).getResourceID() == ID && roles.get(i).hasCreateActivity()){
     			return true;
@@ -97,7 +97,7 @@ public class User {
     }
     
     
-    boolean checkActivityReadAccess(int ID) {
+    public boolean checkActivityReadAccess(int ID) {
     	for (int i = 0; i < roles.size(); i++){
     		if (roles.get(i).getResourceID() == ID && roles.get(i).hasReadActivity()){
     			return true;
@@ -106,7 +106,7 @@ public class User {
     	return false;
     }
     
-    boolean checkActivityLinkAccess(int ID) {
+    public boolean checkActivityLinkAccess(int ID) {
     	for (int i = 0; i < roles.size(); i++){
     		if (roles.get(i).getResourceID() == ID && roles.get(i).hasLinkActivity()){
     			return true;
@@ -115,7 +115,7 @@ public class User {
     	return false;
     }
     
-    boolean checkActivityUpdateAccess(int ID) {
+    public boolean checkActivityUpdateAccess(int ID) {
     	for (int i = 0; i < roles.size(); i++){
     		if (roles.get(i).getResourceID() == ID && roles.get(i).hasUpdateActivity()){
     			return true;
@@ -124,7 +124,7 @@ public class User {
     	return false;
     }
     
-    boolean checkActivityDeleteAccess(int ID) {
+    public boolean checkActivityDeleteAccess(int ID) {
     	for (int i = 0; i < roles.size(); i++){
     		if (roles.get(i).getResourceID() == ID && roles.get(i).hasDeleteActivity()){
     			return true;
@@ -133,7 +133,18 @@ public class User {
     	return false;
     }
     
-    
+    //check viewing rights
+    public boolean checkDepartmentViewing(){
+		return departmentViewing;
+	}
+	
+    public boolean checkCollegeViewing(){
+		return collegeViewing;
+	}
+	
+    public boolean checkUniversityViewing(){
+		return universityViewing;
+	}
     
     
 }
