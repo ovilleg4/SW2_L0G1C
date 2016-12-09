@@ -2,9 +2,8 @@
 public class Banner extends DataSource{
 
 	public Banner(){
-		Host = "";
-		Username = "";
+		Host = "jdbc:mysql://localhost/banner";
+		Username = "root";
 		Password = "";
-		DB = "";
 	}
 }

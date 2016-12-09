@@ -1,5 +1,6 @@
 import java.sql.Date;
-import java.util.ArrayList;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
 public class Student {
 
@@ -16,10 +17,27 @@ public class Student {
 	private Date DropOutDate;
 	private double GPA;
 	private double MajorGPA;
-	private ArrayList<String> CompleteCourses;
+	private String CompletedCourses;
 	
-	public Student(){
-		
+	public Student(String firstName, String lastName) throws SQLException{
+		BannerQuery query = new BannerQuery();
+		ResultSet rs = query.getStudent(firstName, lastName);
+		if(rs!=null){
+			setFirstName(rs.getString("FirstName"));
+			setLastName(rs.getString("LastName"));
+			setGender(rs.getString("Gender"));
+			setDateOfBirth(rs.getDate("DoB"));
+			setCitizenship(rs.getString("Citizenship"));
+			setRace(rs.getString("Race"));
+			setMajor(rs.getString("Major"));
+			setClassification(rs.getString("Classification"));
+			setEnrollmentDate(rs.getDate("Enrollment"));
+			setGraduationDate(rs.getDate("Graduation"));
+			setDateOfBirth(rs.getDate("DropOut"));
+			setGPA(rs.getDouble("GPA"));
+			setMajorGPA(rs.getDouble("MajorGPA"));
+			setCompletedCourses(rs.getString("CompletedCourses"));
+		} 
 	}
 
 	public String getFirstName() {
@@ -126,12 +144,12 @@ public class Student {
 		MajorGPA = majorGPA;
 	}
 
-	public ArrayList<String> getCompleteCourses() {
-		return CompleteCourses;
+	public String getCompleteCourses() {
+		return CompletedCourses;
 	}
 
-	public void setCompleteCourses(ArrayList<String> completeCourses) {
-		CompleteCourses = completeCourses;
+	public void setCompletedCourses(String completedCourses) {
+		CompletedCourses = completedCourses;
 	}
 	
 	

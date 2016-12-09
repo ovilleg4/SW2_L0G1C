@@ -2,9 +2,9 @@
 public class ORSP extends DataSource {
 	
 	public ORSP(){
-		Host = "";
-		Username = "";
+		Host = "jdbc:mysql://localhost/orsp";
+		Username = "root";
 		Password = "";
-		DB = "";
 	}
+	
 }

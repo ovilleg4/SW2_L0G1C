@@ -2,9 +2,8 @@
 public class DigitalMeasures extends DataSource{
 
 	public DigitalMeasures(){
-		Host = "";
-		Username = "";
+		Host = "jdbc:mysql://localhost/digitalmeasures";
+		Username = "root";
 		Password = "";
-		DB = "";
 	}
 }
