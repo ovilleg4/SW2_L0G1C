@@ -1,4 +1,5 @@
 import java.io.File;
+import java.util.ArrayList;
 
 public class Initiative extends Resource{
 
@@ -6,17 +7,41 @@ public class Initiative extends Resource{
 	private String Website;
 	//private Record[] Membership; //replace record with membership type
 	private int AssocPID;
-	private int[] AssocActID;
+	private ArrayList<Integer> AssocActID;
 	
 	public Initiative(){
 	
 	}
 	
-	public void setTitle(String title){
-		this.Title = title;
+	public void setAttachent(File attachment){
+		Attachment = attachment;
 	}
 	
-	public String getTitle(){
-		return this.Title;
+	public void setWebsite(String website){
+		Website = website;
+	}
+	
+	public void setAssocPID(int pid){
+		AssocPID = pid;
+	}
+	
+	public void addAssocActID(int actID){
+		AssocActID.add(actID);
+	}
+	
+	public File getAttachement(){
+		return Attachment;
+	}
+	
+	public String getWebsite(){
+		return Website;
+	}
+	
+	public int getAssocPID(){
+		return AssocPID;
+	}
+	
+	public ArrayList<Integer> getAssocActID(){
+		return AssocActID;
 	}
 }	
