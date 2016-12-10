@@ -3,14 +3,26 @@ import java.util.ArrayList;
 
 public class Initiative extends Resource{
 
-	private File Attachment;
+	private String Attachment;
 	private String Website;
-	private ArrayList<User> Membership; //replace record with membership type
+	private String Membership; //replace record with membership type
 	private int AssocPID;
-	private ArrayList<Integer> AssocActID;
+	private String AssocActID;
 	
 	public Initiative(){
-	
+		ProjectQuery query = new ProjectQuery();
+		ResultSet rs = query.getProject(Title);
+		if(rs != null){
+			setTitle(rs.getString("Title"));
+			setDescription(rs.getString("Description"));
+			setStartDate(rs.getDate("StartDate"));
+			setEndDate(rs.getDate("EndDate"));
+			setGoal(rs.getString("Attachment"));
+			setObjective(rs.getString("Website"));
+			setKeyword(rs.getString("Membership"));
+			setDocumentType(rs.getInt("AssocPID"));
+			setAttachment(rs.getInt("AssocActID"));
+		}
 	}
 	
 	public void setAttachent(File attachment){
@@ -25,15 +37,15 @@ public class Initiative extends Resource{
 		AssocPID = pid;
 	}
 	
-	public void addAssocActID(int actID){
-		AssocActID.add(actID);
+	public void setAssocActID(int actID){
+		AssocActID = actID;
 	}
 	
-	public void addMember(User user){
-		Membership.add(user);
+	public void setMember(String members){
+		Membership = members;
 	}
 	
-	public File getAttachement(){
+	public String getAttachment(){
 		return Attachment;
 	}
 	
@@ -45,11 +57,11 @@ public class Initiative extends Resource{
 		return AssocPID;
 	}
 	
-	public ArrayList<Integer> getAssocActID(){
+	public String getAssocActID(){
 		return AssocActID;
 	}
 	
-	public ArrayList<User> getMemberships(){
+	public String getMemberships(){
 		return Membership;
 	}
 }	
