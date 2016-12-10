@@ -36,6 +36,21 @@ public class Project extends Resource{
 		}
 	}
 	
+	public void createProject() throws SQLException{
+		ProjectQuery query = new ProjectQuery();
+		query.createProject(this);
+	}
+	
+	public void updateProject()throws SQLException{
+		ProjectQuery query = new ProjectQuery();
+		query.updateProject(this);
+	}
+	
+	public void deleteProject() throws SQLException{
+		ProjectQuery query = new ProjectQuery();
+		query.deleteProject(Title);
+	}
+	
 	public Project(){
 		
 	}
