@@ -7,5 +7,4 @@ public class ActivityQuery extends Query{
 		ds.connect();
 	}
 	
-	public 
 }

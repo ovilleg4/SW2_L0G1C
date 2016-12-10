@@ -1,16 +1,40 @@
 import java.io.File;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 
 public class Project extends Resource{
 
 	private String Goal;
 	private String Objective;
-	private ArrayList<String> Keywords;
+	private String Keyword;
 	private String DocumentType;
 	private String Website;
-	private File Attachment;
-	private ArrayList<User> Membership; //Record is a place holder for the type of members associated with this project
-	private ArrayList<Integer> AssocInitId;  //list of Initiative ID's
+	private String Attachment;
+	private String Membership; //Record is a place holder for the type of members associated with this project
+	private String AssocInitId;  //list of Initiative ID's
+	
+	public Project(String Title) throws SQLException{
+		
+		ProjectQuery query = new ProjectQuery();
+		ResultSet rs = query.getProject(Title);
+		if(rs != null){
+			
+			setTitle(rs.getString("Title"));
+			setDescription(rs.getString("Description"));
+			setStartDate(rs.getDate("StartDate"));
+			setEndDate(rs.getDate("EndDate"));
+			setGoal(rs.getString("Goal"));
+			setObjective(rs.getString("Objective"));
+			setKeyword(rs.getString("Keyword"));
+			setDocumentType(rs.getString("DocumentType"));
+			setAttachment(rs.getString("Attachment"));
+			setWebsite(rs.getString("Website"));
+			setMember(rs.getString("Membership"));
+			setAssocInitID(rs.getString("AssocInitID"));
+			
+		}
+	}
 	
 	public Project(){
 		
@@ -24,12 +48,12 @@ public class Project extends Resource{
 		Objective = objective;
 	}
 	
-	public void addKeyword(String keyword){
-		Keywords.add(keyword);
+	public void setKeyword(String keyword){
+		Keyword = keyword;
 	}
 	
-	public void addMember(User user){
-		Membership.add(user);
+	public void setMember(String member){
+		Membership = member;
 	}
 	
 	public void setDocumentType(String documentType){
@@ -40,12 +64,12 @@ public class Project extends Resource{
 		Website = website;
 	}
 	
-	public void setAttachment(File attachment){
+	public void setAttachment(String attachment){
 		Attachment = attachment;
 	}
 	
-	public void addAssocInitID(int initId){
-		AssocInitId.add(initId);
+	public void setAssocInitID(String initId){
+		AssocInitId = initId;
 	}
 	
 	public String getGoal(){
@@ -56,8 +80,8 @@ public class Project extends Resource{
 		return Objective;
 	}
 	
-	public ArrayList<String> Keyword(){
-		return Keywords;
+	public String getKeyword(){
+		return Keyword;
 	}
 	
 	public String getDocumentType(){
@@ -68,12 +92,18 @@ public class Project extends Resource{
 		return Website;
 	}
 	
-	public File getAttachment(){
+	public String getAttachment(){
 		return Attachment;
 	}
 	
-	public ArrayList<User> getMembers(){
+	public String getMembers(){
 		return Membership;
 	}
+
+	public String getAssocInitID(){
+		return AssocInitId;
+	}
+	
+	
 	
 }
