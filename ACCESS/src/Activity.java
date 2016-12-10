@@ -1,24 +1,55 @@
-import java.util.ArrayList;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
 public class Activity extends Resource{
 
-	private ArrayList<String> Keywords;
+	private String Keyword;
 	private String Classification;
 	private String Semester;
 	private String CourseName;
-	private ArrayList<Student> Participants; //Repalace Record with type of participants
+	private String Participants; //Repalace Record with type of participants
 	private int AssocInitID;
 	
-	public Activity(){
+	public Activity() throws SQLException{
 		
+		ProjectQuery query = new ProjectQuery();
+		ResultSet rs = query.getProject(Title);
+		if(rs != null){
+			
+			setTitle(rs.getString("Title"));
+			setDescription(rs.getString("Description"));
+			setStartDate(rs.getDate("StartDate"));
+			setEndDate(rs.getDate("EndDate"));
+			setKeyword(rs.getString("Keyword"));
+			setClassification(rs.getString("Classification"));
+			setSemester(rs.getString("Semester"));
+			setParticipants(rs.getString("Participants"));
+			setAssocInitID(rs.getInt("AssocInitID"));
+			
+		}
 	}
 	
-	public void addKeyword(String keyword){
-		Keywords.add(keyword);
+	public void createProject() throws SQLException{
+		ActivityQuery query = new ActivityQuery();
+		query.createProject(this);
 	}
 	
-	public void addParticipant(Student student){
-		Participants.add(student);
+	public void updateProject()throws SQLException{
+		ActivityQuery query = new ActivityQuery();
+		query.updateActivity(this);
+	}
+	
+	public void deleteProject() throws SQLException{
+		ProjectQuery query = new ProjectQuery();
+		query.deleteProject(Title);
+	}
+	
+	public void setKeyword(String keyword){
+		Keyword = keyword;
+	}
+	
+	public void setParticipants(String student){
+		Participants = student;
 	}
 	
 	public void setClassification(String classification){
@@ -37,8 +68,8 @@ public class Activity extends Resource{
 		CourseName = course;
 	}
 	
-	public ArrayList<String> getKeyword(){
-		return Keywords;
+	public String getKeyword(){
+		return Keyword;
 	}
 	
 	public String getClassification(){
@@ -57,20 +88,8 @@ public class Activity extends Resource{
 		return AssocInitID;
 	}
 	
-	public ArrayList<Student> getParticipants(){
+	public String getParticipants(){
 		return Participants;
 	}
-	
-	public Student getParticipant(String firstName, String lastName){
-		for(int i=0; i<Participants.size(); i++){
-			if(Participants.get(i).getFirstName() == firstName){
-				if(Participants.get(i).getLastName() == lastName){
-					return Participants.get(i);
-				}
-			}
-		}
-		return null;
-	}
-	
 	
 }

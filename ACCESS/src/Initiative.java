@@ -33,7 +33,7 @@ public class Initiative extends Resource{
 		Membership.add(user);
 	}
 	
-	public File getAttachement(){
+	public File getAttachment(){
 		return Attachment;
 	}
 	

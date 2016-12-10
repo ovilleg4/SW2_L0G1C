@@ -36,7 +36,7 @@ public abstract class Resource {
 		return Title;
 	}
 	
-	public String getDescritpion(){
+	public String getDescription(){
 		return Description;
 	}
 	
