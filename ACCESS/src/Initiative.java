@@ -1,5 +1,6 @@
 import java.io.File;
-import java.util.ArrayList;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
 public class Initiative extends Resource{
 
@@ -9,23 +10,39 @@ public class Initiative extends Resource{
 	private int AssocPID;
 	private String AssocActID;
 	
-	public Initiative(){
-		ProjectQuery query = new ProjectQuery();
-		ResultSet rs = query.getProject(Title);
+	public Initiative() throws SQLException{
+		InitiativeQuery query = new InitiativeQuery();
+		ResultSet rs = query.getInitiative(Title);
 		if(rs != null){
+			
 			setTitle(rs.getString("Title"));
 			setDescription(rs.getString("Description"));
 			setStartDate(rs.getDate("StartDate"));
 			setEndDate(rs.getDate("EndDate"));
-			setGoal(rs.getString("Attachment"));
-			setObjective(rs.getString("Website"));
-			setKeyword(rs.getString("Membership"));
-			setDocumentType(rs.getInt("AssocPID"));
-			setAttachment(rs.getInt("AssocActID"));
+			setAttachment(rs.getString("Attachment"));
+			setWebsite(rs.getString("Website"));
+			setMembership(rs.getString("Membership"));
+			setAssocPID(rs.getInt("AssocPID"));
+			setAssocActID(rs.getString("AssocActID"));
 		}
 	}
 	
-	public void setAttachent(File attachment){
+	public void createInitiative() throws SQLException{
+		InitiativeQuery query = new InitiativeQuery();
+		query.createInitiative(this);
+	}
+	
+	public void updateInitiative() throws SQLException{
+		InitiativeQuery query = new InitiativeQuery();
+		query.updateInitiative(this);
+	}
+	
+	public void deleteInitiative() throws SQLException{
+		InitiativeQuery query = new InitiativeQuery();
+		query.deleteInitiative(Title);
+	}
+	
+	public void setAttachment(String attachment){
 		Attachment = attachment;
 	}
 	
@@ -37,19 +54,15 @@ public class Initiative extends Resource{
 		AssocPID = pid;
 	}
 	
-	public void setAssocActID(int actID){
+	public void setAssocActID(String actID){
 		AssocActID = actID;
 	}
 	
-	public void setMember(String members){
+	public void setMembership(String members){
 		Membership = members;
 	}
 	
-<<<<<<< HEAD
-	public File getAttachment(){
-=======
 	public String getAttachment(){
->>>>>>> de75164152b81c12a166838b3f88de43c6ec7031
 		return Attachment;
 	}
 	

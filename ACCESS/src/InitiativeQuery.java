@@ -7,7 +7,7 @@ public class InitiativeQuery extends Query{
 		ds.connect();
 	}
 
-	public ResultSet getInitative(String title){
+	public ResultSet getInitiative(String title){
 		Statement stmt = null;
 		try {
 			stmt = ds.con.createStatement();
